@@ -1,0 +1,21 @@
+AIM:-
+Configure LDAP Server, Configure LDAP Server in order to share users' accounts in your local networks, Add LDAP User Accounts in the OpenLDAP Server, Configure LDAP Client in order to share users' accounts in your local networks. Install phpLDAPadmin to operate LDAP server via Web browser.
+COMMAND:-
+1) Sudo apt install slapd ldap-utils
+2) Systemctl status slapd
+3) Php –v
+4) Sudo dpkg–reconfigure slapd
+5) Sudo gedit /etc/ldap/ldap.conf
+Write the following in idap.conf file:-
+BASE dc=example,dc=com
+URI=ldap: //localhost
+6) ldapsearch -x
+7) sudo apt install phpldapadmin
+8) systemctl status slapd
+9) sudo nano /etc/phpldapadmin/config.php
+delete the array value in line number 300 using(shift+ctrl+-)key
+
+Remove the comment in line number 161
+
+10) Open the browser and refresh it.
+Localhost/phpldapadmin/

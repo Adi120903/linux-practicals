@@ -1,0 +1,52 @@
+AIM:-
+Install DNS Server BIND, Configure DNS server which resolves domain name or IP address, Install BIND 9, Configure BIND.
+COMMAND:-
+1) sudo apt-get install bind9 bind9utils bind9-doc dnsutils
+2) sudo cp /etc/bind/named.conf.options /etc/bind/named.conf.options.bak
+3) sudo gedit /etc/bind/named.conf.options
+
+Comment the line number 25 to 28
+
+Write the text in line number 3
+
+auth-nxdomain no;
+listen-on port 53 { localhost; 192.168.0.0/24; };
+allow-query { localhost; 192.168.0.0/24; };
+
+Change
+
+forwarders{
+8.8.8.8;
+};
+Recursion yes;
+
+4) cd /etc/bind
+
+5) sudo gedit /etc/bind/named.conf.local
+
+6) sudo cp db.local forward.ubuntu.local
+
+7) sudo gedit forward.ubuntu.local
+
+8) sudo cp db.local reverse.ubuntu.local
+
+9) sudo gedit reverse.ubuntu.local
+
+10) sudo systectl restart bind9
+
+11) sudo systemctl enable bind9
+
+12) sudo ufw allow 53
+
+13) sudo named-checkconf etc/bind/named.conf.local
+
+14) sudo named –checkzone ubuntu.local /etc/bind/forward.ubuntu.local
+
+15) sudo named –checkzone ubuntu.local /etc/bind/reverse.ubuntu.local
+
+16) sudo gedit /etc/resolv.conf
+
+17) dig primary ubuntu.local
+
+
+

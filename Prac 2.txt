@@ -1,0 +1,12 @@
+AIM:-
+Initial settings: Add a User, Network Settings, Change to static IP address, Disable IPv6 if not needed, Configure Services, display the list of services which are running Sudo Settings
+COMMAND:-
+Add user
+1) sudo adduser abc
+2) sudo useradd -G sudo abc
+3) su -abc
+4)Reboot the system.
+	Network setting
+6)Gives the ip address default gateway
+7)Disable ipv6
+8)List out the all service and configuration service

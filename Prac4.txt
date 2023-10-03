@@ -1,0 +1,10 @@
+AIM:-
+SSH Server : Password Authentication
+Configure SSH Server to manage a server from the remote computer, SSH Client : (Ubuntu and Windows)
+COMMAND:-
+Open the two ubuntu system one is client and other is server.
+Run in server:
+1) Sudo apt-get install openssh-server
+Run as client
+1)sudo apt-get install openssh-server
+2) ping client ip address

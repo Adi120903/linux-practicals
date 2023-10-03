@@ -1,0 +1,14 @@
+AIM:-
+Configure NFS Server to share directories on your Network, Configure NFS Client. (Ubuntu and Windows Client OS)
+COMMAND:-
+1) Sudo apt-get install nfs-kernel-server
+2) Mkdir A
+3) Ls
+4) Cd A
+5) Touch demo.txt
+6) Pwd
+7) Sudo gedit /etc/exports
+/home/Pranali/ ip address(rw,no_root_squash)
+8) Sudo systemctl restart nfs-server.service
+9) Sudo systemctl status nfs-server.service
+10) My computer > network>map network drive> ip address

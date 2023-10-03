@@ -1,0 +1,16 @@
+AIM:-
+Configure NTP Server (NTPd), Install and Configure NTPd, Configure NTP Client (Ubuntu and Windows)
+COMMAND:-
+1) sudo apt-get install –y ntp
+2) sudo gedit /etc/ntp.conf
+3) comment the line number 18 to 21.
+Eg. #pool 0.ubuntu.pool.ntp.org iburst
+And write the following lines:-
+server 0.north-america.pool.ntp.org iburst
+server 1.north-america.pool.ntp.org iburst
+server 2.north-america.pool.ntp.org iburst
+server 3.north-america.pool.ntp.org iburst
+4)Systemctl restart ntp
+5)Change the network adapter setting
+6)Systemctl status ntp
+7)Synchronized the data and time.

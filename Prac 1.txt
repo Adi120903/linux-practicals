@@ -1,0 +1,4 @@
+AIM:-
+Install DHCP Server in Ubuntu 16.04. Configure DHCP Server, Configure DHCP (Dynamic Host Configuration Protocol) Server.
+COMMAND:-
+Sudo apt-get install isc-dhcp-server
